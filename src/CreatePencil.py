@@ -13,4 +13,11 @@ class Pencil (object):
                 
             paper.text += letter
             
+            if letter == " " or letter == "/n":
+                continue
+
+            if letter.isupper():
+                self.durable_point -= 2
+            else:
+                self.durable_point -= 1
         super().__init__()

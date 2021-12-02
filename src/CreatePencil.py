@@ -27,4 +27,12 @@ class Pencil (object):
 
         self.durable_point = self.start_duarble_point
         self.length -= 1
+
+    def erase(self, paper, string_to_erase):
+
+        erased_text = " "
+        for letter in erased_text:
+            if self.durable_eraser <= 0 or letter.isspace():
+                erase_text = letter + erased_text
+
         super().__init__()

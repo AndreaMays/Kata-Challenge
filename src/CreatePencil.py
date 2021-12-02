@@ -34,5 +34,9 @@ class Pencil (object):
         for letter in erased_text:
             if self.durable_eraser <= 0 or letter.isspace():
                 erase_text = letter + erased_text
+                continue
+
+            erased_text = " " + erased_text
+            self.durable_eraser -= 1
 
         super().__init__()

@@ -38,8 +38,6 @@ class Pencil (object):
 
             erased_text = " " + erased_text
             self.durable_eraser -= 1
-    
-    def edit(self):
-        
+   
 
         super().__init__()

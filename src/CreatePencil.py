@@ -13,4 +13,31 @@ class Pencil (object):
                 
             paper.text += letter
             
+            if letter == " " or letter == "/n":
+                continue
+
+            if letter.isupper():
+                self.durable_point -= 2
+            else:
+                self.durable_point -= 1
+    
+    def sharpen(self):
+        if self.durable_point <= 0:
+            return
+
+        self.durable_point = self.start_duarble_point
+        self.length -= 1
+
+    def erase(self, paper, string_to_erase):
+
+        erased_text = " "
+        for letter in erased_text:
+            if self.durable_eraser <= 0 or letter.isspace():
+                erase_text = letter + erased_text
+                continue
+
+            erased_text = " " + erased_text
+            self.durable_eraser -= 1
+   
+
         super().__init__()
